@@ -1,0 +1,24 @@
+{
+  "name": "azure-queue-task-2",
+  "version": "1.0.0",
+  "description": "Required dependencies:\r * mongoose\r * @azure/serivce-bus\r * dotenv",
+  "main": "AzureListener.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/junaid-soomro/azureServiceBusTask2.git"
+  },
+  "author": "",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/junaid-soomro/azureServiceBusTask2/issues"
+  },
+  "homepage": "https://github.com/junaid-soomro/azureServiceBusTask2#readme",
+  "dependencies": {
+    "@azure/service-bus": "^7.5.0",
+    "dotenv": "^16.0.0",
+    "mongoose": "^6.2.4"
+  }
+}
