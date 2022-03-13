@@ -1,7 +1,7 @@
 module.exports = async (recieveParsedx2oToQueue, parsedx2oReciever) => {
   console.log("Awaiting for parsed x2o messages...");
   const myMessageHandler = async (message) => {
-    console.log("parsed x2o messages", message);
+    console.log("parsed x2o recieved", message.body);
     if (message.body && Object.keys(message.body).length > 0) {
       await parsedx2oReciever.completeMessage(message);
       await recieveParsedx2oToQueue(message.body);

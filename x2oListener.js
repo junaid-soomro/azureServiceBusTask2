@@ -10,7 +10,12 @@ module.exports = async (sendParsedx2oToQueue, receiver) => {
 
   const myMessageHandler = async (message) => {
     console.log("MESSAGES", message);
-    if (message.body && Object.keys(message.body).length > 0) {
+    if (
+      message.body &&
+      Object.keys(message.body).length > 0 &&
+      "header" in message.body &&
+      "object" in message.body
+    ) {
       const {
         header: { uid, orgId },
         object: { objectName, rawBlobKey },
